@@ -34,7 +34,7 @@ module.exports = () => {
         publicPath: '/',
         icons: [
           {
-            src: path.resolve('favicon.ico'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons')
           }
@@ -57,6 +57,13 @@ module.exports = () => {
               presets: ['@babel/preset-env'],
               plugins: ['@babel/plugin-proposal-object-rest-spread']
             }
+          }
+        },
+        {
+          test: /\.(png|jpe?g|gif)$/i,
+          type: 'asset/resource',
+          generator: {
+            filename: 'images/[hash][ext][query]'
           }
         }
       ],

@@ -9,11 +9,13 @@ window.addEventListener('beforeinstallprompt', (event) => {
 });
 
 butInstall.addEventListener('click', async () => {
-    butInstall.style.display = 'none';
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    console.log(`User response to the install prompt: ${outcome}`);
-    deferredPrompt = null;
+    if (deferredPrompt) {
+        butInstall.style.display = 'none';
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        console.log(`User response to the install prompt: ${outcome}`);
+        deferredPrompt = null;
+    }
 });
 
 window.addEventListener('appinstalled', (event) => {
