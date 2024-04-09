@@ -6,6 +6,10 @@
 
 JATE is a progressive web application (PWA) that serves as a simple text editor for coding and note-taking. This application can be used in any modern web browser and offers offline functionality, making it convenient for users on the go!
 
+Here is what the deployed app looks like ![Deployed Application](assets/deployedApp.png)
+
+You can also follow this link to view the app: https://jotspot.onrender.com/
+
 ## Table of Contents
 
 - [Installation](#installation)
