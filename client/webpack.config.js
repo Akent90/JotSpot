@@ -7,25 +7,27 @@ module.exports = () => {
   return {
     mode: 'development',
     entry: {
-      main: './src/js/index.js',
-      install: './src/js/install.js'
+      main: path.resolve(__dirname, 'src', 'js', 'index.js'),
+      install: path.resolve(__dirname, 'src', 'js', 'install.js'),
     },
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
+      clean: true,
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './index.html',
+        template: path.resolve(__dirname, 'index.html'),
         title: 'JATE'
       }),
       new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'service-worker.js'
+        swSrc: path.resolve(__dirname, 'src-sw.js'),
+        swDest: 'service-worker.js',
       }),
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
+        name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'Just Another Text Editor',
         background_color: '#ffffff',
