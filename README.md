@@ -38,6 +38,8 @@ Feel free to reach out to me directly at alexanderkent099@gmail.com
 
 ## References
 
+This PWA was informed and enhanced by the following resources
+
 - IndexedDB: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 - Service Workers: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 - Workbox: [Google Developers](https://developers.google.com/web/tools/workbox)
